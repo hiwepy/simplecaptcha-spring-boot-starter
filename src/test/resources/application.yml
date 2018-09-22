@@ -1,0 +1,4 @@
+simple-captcha:
+  captcha-type: simple
+  height: 200
+  width: 500
