@@ -14,7 +14,7 @@
 <dependency>
 	<groupId>${project.groupId}</groupId>
 	<artifactId>spring-boot-starter-simplecaptcha</artifactId>
-	<version>${project.version}</version>
+	<version>1.0.1.RELEASE</version>
 </dependency>
 ```
 
