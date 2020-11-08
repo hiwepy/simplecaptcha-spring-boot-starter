@@ -3,7 +3,9 @@
 
 ### 说明
 
- > 基于 Simplecaptcha 验证码开源项目实现的验证码 Spring Boot Starter 实现
+ > 基于 [Simplecaptcha ](http://simplecaptcha.sourceforge.net/) 验证码开源项目实现的验证码 Spring Boot Starter 实现
+
+
 
 1. SimpleCaptchaServlet、ChineseCaptchaServlet、StickyCaptchaServlet 自动注册
 

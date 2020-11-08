@@ -440,6 +440,8 @@
 		<dependency>
 		    <groupId>org.gatein.captcha</groupId>
 		    <artifactId>simplecaptcha</artifactId>
+		    <scope>system</scope>
+		    <systemPath>${basedir}/1.1.1.Final-gatein-4/simplecaptcha-1.1.1.Final-gatein-4.jar</systemPath>
 		    <version>${simplecaptcha.version}</version>
 		</dependency>
 		
