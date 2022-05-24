@@ -16,7 +16,7 @@
 <dependency>
 	<groupId>com.github.hiwepy</groupId>
 	<artifactId>simplecaptcha-spring-boot-starter</artifactId>
-	<version>${project.version}</version>
+	<version>2.0.1.RELEASE</version>
 </dependency>
 ```
 
