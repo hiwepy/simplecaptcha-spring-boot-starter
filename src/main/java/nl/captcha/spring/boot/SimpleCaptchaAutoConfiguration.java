@@ -18,6 +18,7 @@ import nl.captcha.servlet.StickyCaptchaServlet;
 @Configuration
 @ConditionalOnClass({ Captcha.class })
 @EnableConfigurationProperties(SimpleCaptchaProperties.class)
+/**\n * Auto-configuration for SimpleCaptchaAutoConfiguration.\n *\n * @author [@Loong Wan](https://github.com/loong10k)\n * @since 1.0.0\n */
 public class SimpleCaptchaAutoConfiguration {
 
     private static final String PARAM_HEIGHT = "height";
