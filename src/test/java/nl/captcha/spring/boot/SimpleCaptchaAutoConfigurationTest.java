@@ -22,7 +22,7 @@ import org.springframework.boot.test.context.runner.ApplicationContextRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 /**
- * Unit tests for {{ @link SimpleCaptchaAutoConfiguration }}.
+ * Unit tests for {@link SimpleCaptchaAutoConfiguration}.
  *
  * <p>Verifies the auto-configuration activates under the expected conditions
  * and exposes its declared beans.</p>
@@ -43,17 +43,47 @@ class SimpleCaptchaAutoConfigurationTest {
     }
 
     @Test
-    @DisplayName("Auto-configuration loads when 'spring.boot.enabled=true'")
-    void testLoadsWhenEnabledPropertySet() {
+    @DisplayName("Auto-configuration loads with simple captcha type")
+    void testLoadsWhenSimpleCaptchaTypeSet() {
         runner.withUserConfiguration(SimpleCaptchaAutoConfiguration.class)
-                .withPropertyValues("spring.boot.enabled=true")
-                .run(context -> assertThat(context).hasSingleBean(SimpleCaptchaAutoConfiguration.class));
+                .withPropertyValues("simplecaptcha.captcha-type=simple")
+                .run(context -> {
+                    assertThat(context).hasSingleBean(SimpleCaptchaAutoConfiguration.class);
+                    assertThat(context).hasBean("simpleCaptchaServlet");
+                });
     }
 
     @Test
-    @DisplayName("Auto-configuration is absent when property is not set")
-    void testNotLoadedWhenPropertyAbsent() {
+    @DisplayName("Auto-configuration loads with chinese captcha type")
+    void testLoadsWhenChineseCaptchaTypeSet() {
         runner.withUserConfiguration(SimpleCaptchaAutoConfiguration.class)
-                .run(context -> assertThat(context).doesNotHaveBean(SimpleCaptchaAutoConfiguration.class));
+                .withPropertyValues("simplecaptcha.captcha-type=chinese")
+                .run(context -> {
+                    assertThat(context).hasSingleBean(SimpleCaptchaAutoConfiguration.class);
+                    assertThat(context).hasBean("chineseCaptchaServlet");
+                });
+    }
+
+    @Test
+    @DisplayName("Auto-configuration loads with sticky captcha type")
+    void testLoadsWhenStickyCaptchaTypeSet() {
+        runner.withUserConfiguration(SimpleCaptchaAutoConfiguration.class)
+                .withPropertyValues("simplecaptcha.captcha-type=sticky")
+                .run(context -> {
+                    assertThat(context).hasSingleBean(SimpleCaptchaAutoConfiguration.class);
+                    assertThat(context).hasBean("stickyCaptchaServlet");
+                });
+    }
+
+    @Test
+    @DisplayName("No captcha servlet beans when no captcha-type property")
+    void testNoServletBeansWhenPropertyAbsent() {
+        runner.withUserConfiguration(SimpleCaptchaAutoConfiguration.class)
+                .run(context -> {
+                    assertThat(context).hasSingleBean(SimpleCaptchaAutoConfiguration.class);
+                    assertThat(context).doesNotHaveBean("simpleCaptchaServlet");
+                    assertThat(context).doesNotHaveBean("chineseCaptchaServlet");
+                    assertThat(context).doesNotHaveBean("stickyCaptchaServlet");
+                });
     }
 }

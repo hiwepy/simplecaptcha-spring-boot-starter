@@ -475,7 +475,7 @@
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <simplecaptcha.version>1.1.1.Final-gatein-4</simplecaptcha.version>
+        <simplecaptcha.version>1.1.1.JAKARTA-LIFERAY-PATCHED-1</simplecaptcha.version>
         <maven.version>3.0</maven.version>
            <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
         <maven-jacoco-plugin.version>0.8.15</maven-jacoco-plugin.version>
@@ -553,10 +553,10 @@
         </dependency>
 
         
-        <!-- https://mvnrepository.com/artifact/org.gatein.captcha/simplecaptcha -->
+        <!-- https://mvnrepository.com/artifact/com.liferay/nl.captcha.simplecaptcha -->
         <dependency>
-            <groupId>org.gatein.captcha</groupId>
-            <artifactId>simplecaptcha</artifactId>
+            <groupId>com.liferay</groupId>
+            <artifactId>nl.captcha.simplecaptcha</artifactId>
             <version>${simplecaptcha.version}</version>
         </dependency>
 
