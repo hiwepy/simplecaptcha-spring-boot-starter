@@ -5,6 +5,12 @@ import java.util.NoSuchElementException;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = SimpleCaptchaProperties.PREFIX)
+/**
+ * <p>Configuration properties for SimpleCaptcha.</p>
+ *
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class SimpleCaptchaProperties {
 
 	public static final String PREFIX = "simple-captcha";
