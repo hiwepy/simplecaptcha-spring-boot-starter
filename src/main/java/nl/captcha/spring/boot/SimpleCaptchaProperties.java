@@ -38,14 +38,28 @@ public class SimpleCaptchaProperties {
 			this.captchaType = captchaType;
 		}
 
+    /**
+     * <p>Returns the get.</p>
+     * @return the get
+     */
 		public String get() {
 			return captchaType;
 		}
 
+    /**
+     * <p>Equals.</p>
+     * @param captchaType
+     * @return the equals
+     */
 		public boolean equals(CaptchaType captchaType) {
 			return this.compareTo(captchaType) == 0;
 		}
 
+    /**
+     * <p>Equals.</p>
+     * @param captchaType
+     * @return the equals
+     */
 		public boolean equals(String captchaType) {
 			return this.compareTo(CaptchaType.valueOfIgnoreCase(captchaType)) == 0;
 		}
@@ -69,50 +83,98 @@ public class SimpleCaptchaProperties {
 	private int width = 200;
 	private int height = 50;
 
+    /**
+     * <p>Returns the captcha type.</p>
+     * @return the get captcha type
+     */
 	public CaptchaType getCaptchaType() {
 		return captchaType;
 	}
 
+    /**
+     * <p>Sets the captcha type.</p>
+     * @param captchaType
+     */
 	public void setCaptchaType(CaptchaType captchaType) {
 		this.captchaType = captchaType;
 	}
 
+    /**
+     * <p>Returns the simple pattern.</p>
+     * @return the get simple pattern
+     */
 	public String getSimplePattern() {
 		return simplePattern;
 	}
 
+    /**
+     * <p>Sets the simple pattern.</p>
+     * @param simplePattern
+     */
 	public void setSimplePattern(String simplePattern) {
 		this.simplePattern = simplePattern;
 	}
 
+    /**
+     * <p>Returns the chinese pattern.</p>
+     * @return the get chinese pattern
+     */
 	public String getChinesePattern() {
 		return chinesePattern;
 	}
 
+    /**
+     * <p>Sets the chinese pattern.</p>
+     * @param chinesePattern
+     */
 	public void setChinesePattern(String chinesePattern) {
 		this.chinesePattern = chinesePattern;
 	}
 
+    /**
+     * <p>Returns the sticky pattern.</p>
+     * @return the get sticky pattern
+     */
 	public String getStickyPattern() {
 		return stickyPattern;
 	}
 
+    /**
+     * <p>Sets the sticky pattern.</p>
+     * @param stickyPattern
+     */
 	public void setStickyPattern(String stickyPattern) {
 		this.stickyPattern = stickyPattern;
 	}
 
+    /**
+     * <p>Returns the width.</p>
+     * @return the get width
+     */
 	public int getWidth() {
 		return width;
 	}
 
+    /**
+     * <p>Sets the width.</p>
+     * @param width
+     */
 	public void setWidth(int width) {
 		this.width = width;
 	}
 
+    /**
+     * <p>Returns the height.</p>
+     * @return the get height
+     */
 	public int getHeight() {
 		return height;
 	}
 
+    /**
+     * <p>Sets the height.</p>
+     * @param height
+     */
 	public void setHeight(int height) {
 		this.height = height;
 	}

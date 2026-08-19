@@ -27,6 +27,11 @@ public class SimpleCaptchaAutoConfiguration {
     @Bean
 	@ConditionalOnMissingBean(name = "simpleCaptchaServlet")
 	@ConditionalOnProperty(prefix = SimpleCaptchaProperties.PREFIX, value = "captcha-type", havingValue = "simple")
+    /**
+     * <p>Simple captcha servlet.</p>
+     * @param properties
+     * @return the simple captcha servlet
+     */
 	public ServletRegistrationBean<SimpleCaptchaServlet> simpleCaptchaServlet(SimpleCaptchaProperties properties) throws ServletException {
 
 		ServletRegistrationBean<SimpleCaptchaServlet> registrationBean = new ServletRegistrationBean<SimpleCaptchaServlet>();
@@ -46,6 +51,11 @@ public class SimpleCaptchaAutoConfiguration {
     @Bean
 	@ConditionalOnMissingBean(name = "chineseCaptchaServlet")
 	@ConditionalOnProperty(prefix = SimpleCaptchaProperties.PREFIX, value = "captcha-type", havingValue = "chinese")
+    /**
+     * <p>Chinese captcha servlet.</p>
+     * @param properties
+     * @return the chinese captcha servlet
+     */
 	public ServletRegistrationBean<ChineseCaptchaServlet> chineseCaptchaServlet(SimpleCaptchaProperties properties) throws ServletException {
 
 		ServletRegistrationBean<ChineseCaptchaServlet> registrationBean = new ServletRegistrationBean<ChineseCaptchaServlet>();
@@ -65,6 +75,11 @@ public class SimpleCaptchaAutoConfiguration {
     @Bean
 	@ConditionalOnMissingBean(name = "stickyCaptchaServlet")
 	@ConditionalOnProperty(prefix = SimpleCaptchaProperties.PREFIX, value = "captcha-type", havingValue = "sticky")
+    /**
+     * <p>Sticky captcha servlet.</p>
+     * @param properties
+     * @return the sticky captcha servlet
+     */
 	public ServletRegistrationBean<StickyCaptchaServlet> stickyCaptchaServlet(SimpleCaptchaProperties properties) throws ServletException {
 
 		ServletRegistrationBean<StickyCaptchaServlet> registrationBean = new ServletRegistrationBean<StickyCaptchaServlet>();
